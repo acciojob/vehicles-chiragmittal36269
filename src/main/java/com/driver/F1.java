@@ -28,24 +28,24 @@ public class F1 extends Car {
         //for all other cases, change the gear accordingly
         else if(newSpeed >= 1 && newSpeed <= 50) {
 //            changeSpeed(newSpeed, getCurrentDirection());
+//            super.changeGear(1);
             setCurrentSpeed(newSpeed);
-            super.changeGear(1);
-//                setCurrentGear(1);
+            setCurrentGear(1);
         } else if (newSpeed >= 51 && newSpeed <= 100) {
             setCurrentSpeed(newSpeed);
-            super.changeGear(2);
+            setCurrentGear(2);
         } else if (newSpeed >= 101 && newSpeed <= 150) {
             setCurrentSpeed(newSpeed);
-            super.changeGear(3);
+            setCurrentGear(3);
         } else if (newSpeed >= 151 && newSpeed <= 200) {
             setCurrentSpeed(newSpeed);
-            super.changeGear(4);
+            setCurrentGear(4);
         } else if (newSpeed >= 201 && newSpeed <= 250) {
             setCurrentSpeed(newSpeed);
-            super.changeGear(5);
+            setCurrentGear(5);
         } else {
             setCurrentSpeed(newSpeed);
-            super.changeGear(6);
+            setCurrentGear(6);
         }
         if(newSpeed > 0) {
             changeSpeed(newSpeed, getCurrentDirection());

@@ -27,7 +27,7 @@ public class F1 extends Car {
         }
         //for all other cases, change the gear accordingly
 
-        else {
+        if(newSpeed > 0) {
             if (newSpeed >= 1 && newSpeed <= 50) {
                 changeSpeed(newSpeed, getCurrentDirection());
                 super.changeGear(1);

@@ -26,27 +26,29 @@ public class F1 extends Car {
             super.changeGear(1);
         }
         //for all other cases, change the gear accordingly
-
+        else if(newSpeed >= 1 && newSpeed <= 50) {
+//            changeSpeed(newSpeed, getCurrentDirection());
+            setCurrentSpeed(newSpeed);
+            super.changeGear(1);
+//                setCurrentGear(1);
+        } else if (newSpeed >= 51 && newSpeed <= 100) {
+            setCurrentSpeed(newSpeed);
+            super.changeGear(2);
+        } else if (newSpeed >= 101 && newSpeed <= 150) {
+            setCurrentSpeed(newSpeed);
+            super.changeGear(3);
+        } else if (newSpeed >= 151 && newSpeed <= 200) {
+            setCurrentSpeed(newSpeed);
+            super.changeGear(4);
+        } else if (newSpeed >= 201 && newSpeed <= 250) {
+            setCurrentSpeed(newSpeed);
+            super.changeGear(5);
+        } else {
+            setCurrentSpeed(newSpeed);
+            super.changeGear(6);
+        }
         if(newSpeed > 0) {
-            if (newSpeed >= 1 && newSpeed <= 50) {
-                changeSpeed(newSpeed, getCurrentDirection());
-                super.changeGear(1);
-            } else if (newSpeed >= 51 && newSpeed <= 100) {
-                changeSpeed(newSpeed, getCurrentDirection());
-                super.changeGear(2);
-            } else if (newSpeed >= 101 && newSpeed <= 150) {
-                changeSpeed(newSpeed, getCurrentDirection());
-                super.changeGear(3);
-            } else if (newSpeed >= 151 && newSpeed <= 200) {
-                changeSpeed(newSpeed, getCurrentDirection());
-                super.changeGear(4);
-            } else if (newSpeed >= 201 && newSpeed <= 250) {
-                changeSpeed(newSpeed, getCurrentDirection());
-                super.changeGear(5);
-            } else {
-                changeSpeed(newSpeed, getCurrentDirection());
-                super.changeGear(6);
-            }
+            changeSpeed(newSpeed, getCurrentDirection());
         }
     }
 }

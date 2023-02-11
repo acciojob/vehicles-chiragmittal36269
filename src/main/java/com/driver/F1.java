@@ -43,7 +43,7 @@ public class F1 extends Car {
             } else if (newSpeed >= 201 && newSpeed <= 250) {
                 changeSpeed(newSpeed, getCurrentDirection());
                 super.changeGear(5);
-            } else if (newSpeed > 250) {
+            } else {
                 changeSpeed(newSpeed, getCurrentDirection());
                 super.changeGear(6);
             }

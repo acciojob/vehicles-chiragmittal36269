@@ -21,6 +21,8 @@ public class Car extends Vehicle {
         this.currentGear = 1;
     }
 
+
+
     public int getWheels() {
         return wheels;
     }
